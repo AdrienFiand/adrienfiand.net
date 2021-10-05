@@ -1,0 +1,3 @@
+user-agent: *
+disallow: /src
+sitemap: https://www.adrienfiand.net/sitemap.xml

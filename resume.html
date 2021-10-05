@@ -1,0 +1,307 @@
+<!doctype html>
+<html>
+
+
+  <!------------------------------------------>
+  <!------------- HEAD SECTION --------------->
+  <!------------------------------------------>
+
+  <head>
+    <!-- Metadata - Title, Encoding, CSS Sheet, Viewport settings -->
+    <title>Adrien Fiand | Resume</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="2%x2%" href="/favicon-2%x2%.png">
+    <!-- Font Import - Noto Sans & Noto Sans JP for content | Rock Salt for Singature/Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-FR">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-US">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-GB">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="x-default">
+  </head>
+
+
+  <!------------------------------------------>
+  <!------------- BODY SECTION --------------->
+  <!------------------------------------------>
+
+  <body>
+
+    <!---->
+    <!-- Navbar : Contains Logo, flat menu & hamburger menu, language selector -->
+    <!---->
+
+    <nav>
+      <div>
+
+        <!-- Menu Icons (depend on responsive CSS) - hamburger menu button -->
+        <div id="burger-button"><button>&#9776;</button></div>
+
+        <!-- Logo - signature style personnal name -->
+        <a href=".\index.html"><h1 id="logo">Adrien<span>F.</span></h1></a>
+
+        <!-- Redirect Icon - linkedin personnal page redirect -->
+        <a href="https://fr.linkedin.com/in/adrien-fiand/en"><img src="./src/icon-linkedin.svg"> </a>
+        
+        <!-- Menu Items (depend on responsive CSS) - relative paths used -->
+        <div id="menu">
+          <ul>
+            <li><a class href=".\index.html#logo">About</a></li>
+            <li><a class href=".\projects.html">Projects</a></li>
+            <li><a class href=".\certifications.html">Certifications</a></li>
+            <li><a class="selected" href=".\resume.html">Resume</a></li>
+            <li><a class href=".\contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Language Dropbox - inline JS, switch to other language path -->
+          <select class="langSelectorOnMenu" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" name="LanguageSelector">
+            <option value="./index.html">EN</option>
+            <option value="./fr/index.html">FR</option>
+          </select>
+        </div>
+
+      </div>
+    </nav>
+
+    <!---->
+    <!-- Main Div : Contains page content, embedded content (img) -->
+    <!---->
+
+    <div id="body">
+      <div class="main-struct">
+        
+        <h2><span>Resume</span></h2>
+        <table class="resume resume-html">
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/pin.png" width="65%"></td>
+            <td class="resume-contact resume-left"><p><i><b>Open to Relocate</b></i></p><p>Currently in France</p></td>
+            <!-- Vertical separator -->
+            <td class="resume-Vbar" rowspan="7" style="background:#404040;">
+            </td>
+            <td class="resume-right" rowspan="2">
+              <p class="resume-title">Adrien <b>Fiand</b></p>
+              <p class="resume-subtitle">Network & System Engineer <b>|</b> SysOps/DevOps Engineer</p>
+            </td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/syringe.png" width="65%"></td>
+            <td class="resume-contact"><p><i><b>Covid-19</i></b> Fully Vaccinated</p></td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/phone.png" width="65%"></td>
+            <td class="resume-contact" style="letter-spacing: -0.04em;"><p><i><b>FR</b></i> +33 7 81 03 82 94 <b>| <i>UK</i></b> +44 753 938 3404</p></td>
+            <td class="resume-right resume-description" rowspan="5"><p>Last year student of a 5-year IT engineering program, seeking for a pre-employment internship. Accumulated 1 year of experience through internships and freelance. Knowledgeable in the conception, deployment, documentation and troubleshooting of small and medium sized business hybrid IT infrastructure. Always on a quest for new skills to learn and challenges to push myself further.</p></td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/whatsapp.png" width="65%"></td>
+            <td class="resume-contact"><p><i><b>WhatsApp</b></i> <span style="letter-spacing: -0.025em;"> +33 7 81 03 82 94 </span></p></td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/email.png" width="65%"></td>
+            <td class="resume-contact"><p><b><i>E-mail</i></b> fiandadrien@gmail.com</p></td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/linkedin.png" width="65%"></td>
+            <td class="resume-contact"><p><b><i>LinkedIn</i></b> linkedin.com/in/adrien-fiand</p></td>
+          </tr>
+          <tr>
+            <td class="resume-icon" valign="middle"><img style="vertical-align: middle;" src="./src/contact/www.png" width="65%"></td>
+            <td class="resume-contact"><p><b><i>Website</i></b> www.adrienfiand.net</p></td>
+          </tr>
+        
+          <!-- Horizontal separator -->
+          <tr>
+            <td colspan="4"></td>
+          </tr>
+        
+          <!-- MAIN - PART -->
+          
+          <tr>
+            <td colspan="2">
+        
+              <p class="resume-section"><b>Languages</b></p>
+        
+              <p class="resume-space-top1-5"><b class="resume-mainitem">French</b> - Fluent (Native Language)</p>
+              <p class="resume-space-top1-5"><b class="resume-mainitem">English</b> - Proficient (TOEIC Score 960)</p>
+        
+              <p class="resume-section"><b>Education</b></p>
+        
+              <p class="resume-space-top1-9"><b class="resume-mainitem">CESI Engineering School</b><i><u class="resume-date"> 2017 - 2022</u></i></p>
+              <p style="height:1.2em;" class><b>Information Technology Master's Degree</b> <span class="resume-stretch"> </span></p>
+              <p style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-top1-5"><i>5-year program, integrated preparatory cycle</i><span class="resume-stretch"> </span></p>
+              <p style="height:2.6em; letter-spacing: -0.015em;" class="resume-space-top1-5 resume-double"><span style="letter-spacing: 0.015em;">Problem Based Learning methodology </span>: Supervised autonomous learning in groups. <span class="resume-stretch"></span></p>
+        
+              <p class="resume-section"><b>Skills</b></p>
+        
+              <p class="resume-space-top1-9 resume-space-bottom3" style="letter-spacing: -0.015em;"><b class="resume-mainitem">Management – Hybrid Infrastructure</b></p>
+              <ul>
+                <li><b>Conception:</b> Network Planning (VLSM),<span class="resume-stretch" style="white-space: pre-wrap">Backup,  Fault-Tolerance,  Sizing,  Scaling</span></li>
+                <li class="resume-space-bottom2 resume-space-top2"><b>Maintenance:</b> Monitoring (Metrics, Logs),<span class="resume-stretch" style="white-space: pre-wrap"> Troubleshooting  (Root  Cause  Analysis)</span></li>
+                <li><b>Cloud Service Providers:</b> Amazon Web<span class="resume-stretch" style="white-space: pre-wrap">Services  (AWS),  Microsoft  Azure  (AZ)</span></li>
+              </ul>
+
+              <p class="resume-space-top5 resume-space-bottom3"><b class="resume-mainitem">Network – Routing & Switching</b></p>
+              <ul>
+                <li style="height:1.2em"><b>Security:</b> ACLs, Certificates, 802.1X, Proxy<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-top2"><b>LAN:</b> STP, VLAN 802.1Q, HSRP, EIGRP, OSPF<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom2 resume-space-top2"><b>WAN:</b> IPsec VPN, OpenVPN, MPLS, SD-WAN<span class="resume-stretch"></span></li>
+                <li><b>VOIP:</b> Voice VLAN, SIP, IAX</li>
+              </ul>
+              <p class="resume-space-top5 resume-space-bottom3"><b class="resume-mainitem">System – Windows & Linux OSes</b></p>
+              <ul>
+                <li style="height:1.2em"><b>Services:</b>  DHCP, DNS, NPS/Radius, AD, RDS<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom2 resume-space-top2"><b>Virtualization:</b> EC2, VMWare, KVM, Docker<span class="resume-stretch"></span></li>
+                <li class="resume-space-bottom2" style="letter-spacing: -0.015em;"><b>CI/CD  Automation:</b>  Python, Powershell, <span class="resume-stretch" style="white-space: pre-wrap">Bash,  CloudFormation,  Serverless</span></li>
+              </ul>
+
+              <p style="height:2.8em; line-height:1.4em" class="resume-space-top5 resume-listing"><b class="resume-mainitem">Self/Fast-Learner – Problem-Solving<br>Critical-Thinker – Curious – Versatile</b></p>
+                
+
+              <p class="resume-section"><b>Interest</b></p>
+        
+              <p style="height:2.6em; letter-spacing: -0.015em;" class="resume-space-top1-9 resume-space-bottom1 resume-double"><b class="resume-mainitem">Do It Yourself</b> - Develop curiosity and new skills by trying to build and fix various things.<span class="resume-stretch"></span></p>
+              <p style="height:2.6em; letter-spacing: -0.015em;" class="resume-space-top1 resume-space-bottom1 resume-double"><b class="resume-mainitem">Cars & Games</b> - Great way to relax, to learn how to manage my stress, develop relations.<span class="resume-stretch"></span></p>
+              <p style="height:2.6em" class="resume-space-top1 resume-double"><b class="resume-mainitem">4L Trophy</b> - Humanitarian raid for children<span class="resume-stretch"> in Morocco. Participated to the 2020 edition.</span></p>
+        
+            </td>
+            <!-- Vertical separator -->
+            <td rowspan="6"></td>
+            <td>
+        
+              <p class="resume-section"><b>Experience</b></p>
+        
+              <p class="resume-space-top1-5 resume-space-bottom1"><span><b class="resume-mainitem">Jr. Net/SysAdmin | </b>Freelance 40 <span style="font-size: 75%; height: 1.125em; line-height: 1.125em;"><sup>hr/</sup><sub>mo</sub></span> Blueberry Consultants - UK</span><i style="text-align: right;"><u class="resume-date">2021/03 - Now</u></i></p>
+              <ul>
+                <li style="height:1.2em" class="resume-space-top0-5">Configured the HQ network. Implemented 802.1X for dynamic VLAN assignment.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom1 resume-space-top1">Researched how to manage Linux machines in AD. Tested and deployed SSSD.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom1">Managed routing and security to AWS EC2 Instances and between VPCs & VPNs.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em">Prepared and migrated production servers from one AWS region to another.</li>
+              </ul>
+
+              <p class="resume-space-top3 resume-space-bottom1"><span><b class="resume-mainitem">SysAdmin Trainee | </b>Blueberry Consultants - UK</span><i><u class="resume-date">2020/10 - 2021/02</u></i></p>
+              <ul>
+                <li style="height:1.2em; letter-spacing: -0.015em;" class=" resume-space-top0-5">Automated the deployment of a complex AWS serverless infrastructure, 100+ bits.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em; letter-spacing: -0.015em;" class=" resume-space-bottom1 resume-space-top1">Improved and secured network resources access. Deployed a Hybrid AD and VPN.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class=" resume-space-bottom1">Proposed and implemented an IP Plan for the new 'CORE' VPC and VPN Tunnels.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em; letter-spacing: -0.015em;">Helped developers troubleshoot some build issues in AWS (CodeBuild & Pipeline).</li>
+              </ul>
+
+              <p class="resume-space-top3 resume-space-bottom1"><span><b class="resume-mainitem">NetAdmin Intern | </b>Aramys Cloud Service Provider - FR </span><i><u class="resume-date">2020/01 - 2020/04</u></i></p>
+              <ul>
+                <li style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-top0-5">Prepared a small 'Collapsed Core' network. Draw the network topology diagrams.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-bottom1 resume-space-top1">Provided support to clients, found and fixed the issues root causes. Wrote reports.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em">Improved company internal processes with some basic Power Automate scripts.</li>
+              </ul>
+
+                <p class="resume-space-top3 resume-space-bottom1"><span><b class="resume-mainitem">IT Technician Intern | </b>Hospital Center Of Arras - FR</span><i><u class="resume-date">2019/05 - 2019/06</u></i></p>
+              <ul>
+                <li style="height:1.2em" class="resume-space-top0-5">Researched and tested Microsoft SCCM. Coached the IT department on SCCM.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom1 resume-space-top1">Configured network switches and wireless controllers (Cisco) for a small branch.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em">Troubleshooted network connectivity to critical equipment in operating room.</li>
+              </ul>
+
+              <p class="resume-space-top3 resume-space-bottom1"><span><b class="resume-mainitem">IT Support Intern | </b>SN AESDANA, IT Branch - FR</span><i><u class="resume-date">2018/09 - 2018/10</u></i></p>
+              <ul>
+                <li style="height:1.2em" class="resume-space-top0-5">Remotely reconfigured the client’s firewall rules. Improved naming conventions.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em" class="resume-space-bottom1 resume-space-top1">Tested, documented, and deployed an IP phone solution with self-provisioning.<span class="resume-stretch"></span></li>
+                <li style="height:1.2em">Enrolled mobile devices for standardized software and security policies.</li>
+              </ul>
+
+              <p class="resume-section"><b>Experimental Projects</b></p>
+        
+              <p style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-top1-9 resume-space-bottom1 resume-listing"><b class="resume-mainitem">Home Lab</b> - Pfsense + Sandbox server in my basement running Proxmox & GNS3.<span class="resume-stretch"></span></p>
+              <p style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-bottom1 resume-space-top1 resume-listing"><b class="resume-mainitem">Small Business</b> - Tested Open-Source solutions: OpenLDAP, BindDNS, Apache.<span class="resume-stretch"></span></p>
+              <p style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-bottom1 resume-space-top1 resume-listing"><b class="resume-mainitem">Worldwide Corporation</b> - Played with Asterisk, IPsec VPN, FortiGate SD-WAN.<span class="resume-stretch"></span></p>
+              <p style="height:1.2em; letter-spacing: -0.015em;" class="resume-space-top1 resume-listing"><b class="resume-mainitem">Game Server</b> - Host a small network of Minecraft servers with plugins and proxy.</p>
+        
+              <p class="resume-section"><b>Certifications</b></p>
+        
+              <p class="resume-space-top1-9 resume-space-bottom1 resume-listing"><b class="resume-mainitem">AWS</b> - Certified Sysops Administrator, Associate [AWS SysOps] <i><u class="resume-date">EXP. 2024</u></i></p>
+              <p class="resume-space-bottom1 resume-space-top1 resume-listing"><b class="resume-mainitem">Cisco</b> - Certified Network Associate, Routing & Switching [CCNA R&S] <i><u class="resume-date">EXP. 2023</u></i></p>
+              <p class="resume-space-top1 resume-listing"><b class="resume-mainitem">Microsoft</b> - Windows Server Administration, Fundamentals [MTA] <i><u class="resume-date">NON EXP.</u></i></p>
+              
+              <div class="resume-certimg">
+                <img src="./src/certifs/sysops.png">
+                <img src="./src/certifs/ccna.png">
+                <img src="./src/certifs/mta.png">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="main-embedded"><img class="resume-img" src="./src/resume/resume-en.png"></div>
+
+        <div class="main-link">
+          <a style="margin-top: 20px" href="./src/resume/resume-en.pdf">Download - Resume</a>
+        </div>
+
+        <h2 id="reference"><span>Reference</span></h2>
+        <div class="main-embedded"><img src="./src/resume/ref-bb.png"> </div>
+        <div class="main-link">
+          <a href="./src/resume/ref-bb.pdf">Download - Reference</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!---->
+    <!-- Footer : Legal mentions, hosting services -->
+    <!---->
+
+    <footer>
+      <p>2021 - Self-Made, Adrien FIAND | Icons made by Freepik & Iconixar from www.flaticon.com</p>
+    </footer>
+
+  </body>
+
+
+  <!------------------------------------------>
+  <!------------- SCRIPT SECTION ------------->
+  <!------------------------------------------>
+
+  <!-- Library Import : jQuery -->
+  <script src="jquery-3.5.1.min.js"></script>
+
+  <!-- jQuery Function : Hamburger-Menu -->
+  <script>
+    //Store hamburger menu state
+    var IsMenuOpen = false;
+
+    //Method that opens the menu
+    function openMenu(){
+      $('#menu')[0].style.display = "inline-block";
+      IsMenuOpen = true;
+      document.querySelector('#burger-button > button').innerHTML = "&#10005";
+    };
+
+    //Method that closes the menu
+    function closeMenu(){
+      $('#menu')[0].style.display = "none";
+      IsMenuOpen = false;
+      document.querySelector('#burger-button > button').innerHTML = "&#9776;";
+    };
+
+    //Add a listener on the hamburger menu button, on click event do :
+    document.querySelector('#burger-button').addEventListener('click', function (e) {
+      e.preventDefault();
+      //on click if menu already open then close it.
+      if (IsMenuOpen) { 
+        closeMenu();
+        //Remove the listener on the page content ("body"), on click event
+        document.querySelector('#body').removeEventListener('click', closeMenu);
+      }
+      //otherwise (menu not open) then open it.
+      else { 
+        openMenu();
+        //Add a listener on the page content ("body"), on click event it will call close menu
+        document.querySelector('#body').addEventListener('click', closeMenu);
+      }
+    });
+  </script>
+
+</html>

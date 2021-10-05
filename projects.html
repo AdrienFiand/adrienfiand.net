@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+
+
+  <!------------------------------------------>
+  <!------------- HEAD SECTION --------------->
+  <!------------------------------------------>
+
+  <head>
+    <!-- Metadata - Title, Encoding, CSS Sheet, Viewport settings -->
+    <title>Adrien Fiand | Projects</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Font Import - Noto Sans & Noto Sans JP for content | Rock Salt for Singature/Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-FR">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-US">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-GB">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="x-default">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+  </head>
+
+
+  <!------------------------------------------>
+  <!------------- BODY SECTION --------------->
+  <!------------------------------------------>
+
+  <body>
+
+    <!---->
+    <!-- Navbar : Contains Logo, flat menu & hamburger menu, language selector -->
+    <!---->
+
+    <nav>
+      <div>
+
+        <!-- Menu Icons (depend on responsive CSS) - hamburger menu button -->
+        <div id="burger-button"><button>&#9776;</button></div>
+
+        <!-- Logo - signature style personnal name -->
+        <a href=".\index.html"><h1 id="logo">Adrien<span>F.</span></h1></a>
+
+        <!-- Redirect Icon - linkedin personnal page redirect -->
+        <a href="https://fr.linkedin.com/in/adrien-fiand/en"><img src="./src/icon-linkedin.svg"> </a>
+        
+        <!-- Menu Items (depend on responsive CSS) - relative paths used -->
+        <div id="menu">
+          <ul>
+            <li><a class href=".\index.html#logo">About</a></li>
+            <li><a class="selected" href=".\projects.html">Projects</a></li>
+            <li><a class href=".\certifications.html">Certifications</a></li>
+            <li><a class href=".\resume.html">Resume</a></li>
+            <li><a class href=".\contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Language Dropbox - inline JS, switch to other language path -->
+          <select class="langSelectorOnMenu" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" name="LanguageSelector">
+            <option value="./index.html">EN</option>
+            <option value="./fr/index.html">FR</option>
+          </select>
+        </div>
+
+      </div>
+    </nav>
+
+    <!---->
+    <!-- Main Div : Contains page content, embedded content (img) -->
+    <!---->
+
+    <div id="body">
+      <div class="main-struct">
+
+        <h2><span>Table of Content</span></h2>
+          
+        <h3><span>Project Summary</span></h3>
+
+            <p>These are some of the most captivating projects I worked on: they are anonymised & critical information is sanitized. Scroll or Click the projects titles below to learn more!</p>
+            <ul>
+              <li style="margin: 10px 0"><a href="#1">Amazon Web Service (AWS) - Infrastructure Automation</a></li>
+              <li style="margin: 10px 0"><a href="#2">Office Network Security - Vlan, Firewall Rules & DOT1X</a></li>
+              <li style="margin: 10px 0"><a href="#3">AWS Region Migration (1/2) - New VPC, IP Plan & VPN</a></li>
+              <li style="margin: 10px 0"><a href="#4">AWS Region Migration (2/2) - VPC Management Improvement</a></li>
+              <li style="margin: 10px 0"><a href="#5">User Authentication Process Enhancement - AD, NPS & SSSD</a></li>
+              <li style="margin: 10px 0"><a href="#6">Sandbox/Test Environment - Using Pfsense, GNS3 & KVM</a></li>
+              <li style="margin: 10px 0"><a href="#7">Enhanced WAN technologies for DATA & VOICE - MPLS & SD-WAN</a></li>
+              <li style="margin: 10px 0"><a href="#8">Campus Network Design - Redudancy and Fault tolerance</a></li>
+              <li style="margin: 10px 0"><a href="#9">Minecraft Server - Improved the Server Network with a Proxy</a></li>
+            </ul>
+    
+
+          <h3><span>Research Thesis</span></h3>
+            <p>In the scope of my studies I had to research and write a small thesis. I decided to use a problematic that I was dealing with at work: AWS EC2 Migrations. More precisely moving from the Para-Virtualized (PV) to the Hardware-Virtual-Machine (HVM) instance type.<br> This kind of migration isn't supported natively by AWS and for good reasons. But with a good understanding of Virtualization Mechanisms, CPU Rings, Guest Instructions Handling and Operating Systems it may be possible to perform the migration.</p>
+            <div class="main-link">
+              <a href="./src/projects/aws-pv2hvm.pdf">Research Thesis - AWS EC2 migration from PV to HVM</a>
+            </div>
+
+        
+
+
+        <h2><span>Projects</span></h2>
+        
+          <h3 id="1"><span>Amazon Web Service (AWS) - Infrastructure Automation</span></h3>
+            <p class="keywords"><span>Keywords : CloudFormation - Serverless - Stacks/Templates - Powershell Scripts</span><span class="scope">Scope : Work</span></p>
+            <p class="proj-sum">Automated the deployment of a complex AWS infrastructure (100+ Components) using AWS CloudFormation / Serverless. The automation facilitates the creation of new environments (development, testing...) reliably, and in a short time span.</p>
+            <p>Fully automated the deployment for one of the world's largest online magazines and news vendors website. The infrastructure is rather complex, it combines a static part (browsing) and a dynamic part (checkout). The deployment supports many lifecycles/stages: PROD, DEV, TEST, UAT. Each one has its specificities. Other lifecycles can easily be added. </p>
+            <p>The static site relies on multiples re-generation per day. The dynamic site relies on several serverless functions. In the back SQL and no-SQL databases are used, as well as many more such as networking elements, message queuing, at edge functions... Overall that's an infrastructure of more than 100 AWS components interconnected together that required automation.</p>
+            <p>To do so I used the Serverless Framework (SLS) which is cloud agnostic and thus works like a "wrapper" for AWS CloudFormation: it provides more functionalities through transparent AWS CLI/SDK calls. For example SLS cross-region cross-stack variables references came in quite handy, as AWS CloudFormation only support cross-stack in the same region. SLS also offers plugins.</p>
+            <p>Dynamic references and variables are used to provide unique names to the AWS components, thus allowing multiple stages to be deployed in each region. For maintainability and clarity the AWS components are split in many templates first by layers then by services, if necessary. Finally, I modified the "codebuild" PowerShell scripts, in order to correctly map the deployed AWS components in the "appsettings" pulled from Gitlab.</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#1" onclick="expand('./src/projects/aws-automation-A.png'); return false;">
+                  <img src="./src/projects/aws-automation-A.png">
+                </a>
+                <figcaption>Automation Templates Architecture</figcaption>
+              </figure>
+              <figure>
+                <a href="#1" onclick="expand('./src/projects/aws-automation-B.png'); return false;">
+                  <img src="./src/projects/aws-automation-B.png">
+                </a>
+                <figcaption>Automation Deployment Flowchart</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="2"><span>Office Network Security - Vlan, Firewall Rules & DOT1X</span></h3>
+            <p class="keywords"><span>Keywords : Pfsense - Wireless Controller - Switch - Network Access Control</span><span class="scope">Scope : Work</span></p>
+            <p class="proj-sum">Deployed an office network, with segmentation and secured it with firewall rules. Network Access Control (DOT1X) was added to secure physical access to the network and place each user in the correct network segment.</p>
+            <p>Following a recent office move, it was the best time to update the network, from a simple LAN, to a managed network using VLANs. Most of the employees are remote all over the world, only about 25 users are at the office, thus it was decided to not overcomplicate things. 5 Vlans are used: USER, ADMIN, VOICE, TEST, GUEST. It's enough to provide the network access granularity we need.</p>
+            <p>Those VLANs are for the most self-explanatory. USER will regroup all employees except Sysadmins and it has basic IPsec access to our AWS CORE resources. ADMIN is for office network devices and sysadmins, and it has elevated IPsec access to our AWS CORE resources. The remaining VLANs don't have IPsec access. ADMIN can access VOICE, TEST, USER. USER can access TEST. GUEST is isolated. Firewall Rules and IPsec have thus been setup accordingly in our Pfsense.</p>
+            <p>At the same time the company was looking to pass a governmental cybersecurity certification, thus having network access control (NAC) became a must. For nomad users that's already in place thanks to our Remote VPN with 3 tunnels (USER, DEV, ADMIN): to connect to their tunnel the employees use their AD/O365 credentials. For the office that's a bit more complex having VLANs is not enough: you just have to plug on the right port to get access to the VLAN you want.</p>
+            <p>Thus setting up port network access control (PNAC) with DOT1X was required, in our case it made more sense to use DOT1X instead of MAC address authentication. Indeed, DOT1X allows employees to connect to the network using their AD/O365 logins: those logins are sent to our Radius (NPS) server, which then lookup if the employee is a USER or ADMIN. The Radius will respond to the network device with VLAN to put the employee in, amazing!</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#2" onclick="expand('./src/projects/office-net-A.png'); return false;">
+                  <img src="./src/projects/office-net-A.png">
+                </a>
+                <figcaption>Effect of firewall rules on communications</figcaption>
+              </figure>
+              <figure>
+                <a href="#2" onclick="expand('./src/projects/office-net-B.png'); return false;">
+                  <img src="./src/projects/office-net-B.png">
+                </a>
+                <figcaption>Logical Network Topology (Simplified Overview)</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="3"><span>AWS Region Migration (1/2) - New VPC, IP Plan & VPN</span></h3>
+            <p class="keywords"><span>Keywords : Subnetting - Split-Brain DNS - Route Summary - IPsec & Open VPN</span><span class="scope">Scope : Work</span></p>
+            <p class="proj-sum">Planned the network for a new AWS VPC that will host the company CORE services. Beside the migration of the existing CORE services from another VPC, a VPN server with split-brain DNS was deployed in this new VPC.</p>
+            <p>For many years the company which is based in Europe (HQ in UK) has been using AWS IRELAND region (launched in 2007), back then AWS was still fairly new. It is only in 2016 that another Europe region opened: LONDON. At that time nothing justified a migration there of all systems (costs, features ...). But things changed when Brexit was announced, it raised a number of questions about legislation, risks, future security guidance of the UK.</p>
+            <p>Given the knowns and the unknowns, a decision was made to deploy a new VPC in the LONDON region so that we would gradually move our CORE system there. Since the network was being built from scratch, it was decided to rethink the company CORE infrastructure IP Plan (New VPC + VPNs). The migration will take time, thus the new IP Plan must not collide with the existing networks: 2 unused IP blocks where chosen for the VPC and VPN tunnels. </p>
+            <p>The IP blocks are split in smaller chunks with some logic behind to allow route summarization, which makes it easier to maintain and evolve configurations of Routing Table and Access Control List. The VPC block is first divided by resources reachability (private/public) and then split again before we obtain subnets (DMZ...). The VPN block is divided for a granular access (user, dev, admins) to our resources. The VPN subnets are then going to be mapped to VPN tunnels. </p>
+            <p>A split-brain DNS has been setup to resolve resources with their private IPs when connected to the company network (office & VPN). Finally, I deployed Pritunl, our new Remote (nomad user) and Site-to-Site (offices) VPN solution. It allows to create OpenVPN, Wireguard & IPsec tunnels. It has a web management interface and supports multiple Single Sign On sources (O365,SAML,Radius).</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#3" onclick="expand('./src/projects/aws-migration-1_2.png'); return false;">
+                  <img src="./src/projects/aws-migration-1_2.png">
+                </a>
+                <figcaption>IP Plan (Shortened)</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="4"><span>AWS Region Migration (2/2) - VPC Management Improvement</span></h3>
+            <p class="keywords"><span>Keywords : ACL / SG - Routing Table - Internet GW & Nat GW - PAT</span><span class="scope">Scope : Work</span></p>
+            <p class="proj-sum">Redesigned the methodology used to secure AWS EC2 instances. Creation of Security Group templates: less time is spent redoing and updating the same configurations. Implemented the concepts of Public and Private Subnets.</p>
+            <p>In the IP Plan, I prepared subnets for resources accessible only from inside the company network (private), and other for outside access (public). In AWS a public subnet is ideal for web server, vpn server, any machine that would usually be put in a DMZ. The public subnet as an Internet Gateway, and the servers (EC2 Instances) inside it can/should have a Public IP to be able TO access the internet and be accessed FROM it.</p>
+            <p>In AWS a private subnet doesn't have an Internet Gateway, and the Servers (EC2 Instances) inside it don't have public IPs. Thus they can't access Internet, nor be accessed from it. This is more secure as we don't rely on Security Groups (SG) & Access Control List (ACL) only. Even though, we don't want the servers to be accessible FROM Internet, we want them to be able to reach it: there is a difference in the trust of who initiates the communication.</p>
+            <p>For example, we still want the machine to be able to access Internet for updates: to do so a NAT Gateway is added. It does some Port-Access Translation (PAT), like a Home Routers does. This allows the server TO reach the Internet, while keeping them unreachable FROM the Internet.</p>
+            <p>I proposed a new way of using Security Group (SG). EC2 Instances can have up to 5 SG. This allows to write SG "template" per theme. For example, all our EC2 will have their "service" SG (it can allow various ports), then we also add the "management" SG (it always allow SSH, RDP...). This is better for maintenance and clarity, as we don't rewrite the same stuff in every EC2 SG. Other templates are used for VPN tunnels granular access. </p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#4" onclick="expand('./src/projects/aws-migration-2_2.png'); return false;">
+                  <img src="./src/projects/aws-migration-2_2.png">
+                </a>
+                <figcaption>Logical Network Topology (Simplified Overview)</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="5"><span>User Authentication Process Enhancement - AD, NPS & SSSD</span></h3>
+            <p class="keywords"><span>Keywords :  Hybrid AD - NPS & Radius - AD Schema - Domain Join - GPO</span><span class="scope">Scope : Work</span></p>
+            <p class="proj-sum">Setup of a Hybrid Active Directory (AD) from an existing Azure AD, PowerShell scripts were needed. Researched how to join Linux systems to AD: Discovered, tested and deployed the System Security Services Daemon (SSSD).</p>
+            <p>For some times the company entreprise directory has been Azure Active Directory (AAD) only. The idea of having a Local AD (ADDS) came up for Remote VPN tunnels and Resources Authentication (Windows, Linux). If we were going to implement a Local AD it only made sense to bind it with our Cloud AD (Hybrid AD). But Microsoft doesn't let you go hybrid when coming from Azure AD. </p>
+            <p>It's true that Microsoft offers a managed Azure ADDS, but we didn't feel like it was the right decision: it doesn't have all Local AD features (schema extension...), IPSec tunnels would be required to Azure from our offices... Thus it was decided to stick with a self-managed AD. The solution we found to have an Hybrid AD is to export-import our Azure AD setup into the Local AD. I wrote PowerShell scripts that does the export-import of users and their attributes, so that we can then launch the hybrid sync without losing our Azure content.</p>
+            <p>With our new Remote VPN solution we tested multiple SSO options (O365/SAML), but none of them beat the Radius one for our use case. Since we now have a Local AD, I added the NPS role. It's Microsoft implementation of Radius, with the benefits of being directly integrated with Local AD. Plus, we can even use Azure MFA (thanks to Hybrid AD).</p>
+            <p>Finally, it was decided to join our servers & clients to the domain, so that employees could log in with their own credentials. It's easy for Windows systems but not so much for Linux. After some research I found out that fairly recent Linux distributions supports the System Security Services Daemon (SSSD), which enables to join AD domain. I tested it to validate it filled our needs: users login (GPO filtering), permission management (SudoRules using AD schema extension), and then deployed it. </p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#5" onclick="expand('./src/projects/user-auth.png'); return false;">
+                  <img src="./src/projects/user-auth.png">
+                </a>
+                <figcaption>Different ways to setup an Hybrid AD when coming from Azure AD only</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="6"><span>Sandbox/Test Environment - Using Pfsense, GNS3 & KVM</span></h3>
+            <p class="keywords"><span>Keywords :  Network Simulation & Emulation - Virtualization VM & Containers</span><span class="scope">Scope : Perso</span></p>
+            <p class="proj-sum">Created a Sandbox environment at home to experiment and learn on enterprise like infrastructure that I build. The sandbox runs on Open-Source solutions: Proxmox for the virtual machines and GNS3 for network devices emulation.</p>
+            <p>To gain new knowledges I used to do Labs on Cisco Packet Tracer (networking side: simulation), and VMWare Virtual Machines (system side: virtualization). This worked well and allowed me to grow skills quicker than I expected, to the point it wasn't sufficient anymore. Packet Tracer is limited as it's a simulation. Hypervisors (VMWare) aren't designed to handle advanced networking... Plus I began combining Network & Systems, to learn on more realistic infrastructures. </p>
+            <p>To overcome those limitations, in my basement, I put a server running a bare-metal Proxmox (Linux/Debian based Hypervisor), it offers a web interface to manage the VMs (KVM/Qemu engine). On the Proxmox system, I installed a network emulator (GNS3) which uses real network devices OS. The emulated devices can communicate in real time with the VMs through the Proxmox vSwitches. I also added a Pfsense box with a VLAN to access Proxmox & GNS3 web management interfaces. And another VLAN (with a PPPoE server) for my GNS3 routers that require Internet access.</p>
+            <p>Containers are lighter than VMs: they consume less resources during my Labs. Though VMs still have their place, it depends on the service you want to run, the OS compatibilities... Proxmox offers Linux Containers: I activated nested Virtualization that allows me to put Docker Containers inside the Linux ones (this way I can snapshot Docker). With all this I'm more flexible: I can even build experimental hybrid infrastructure (AWS, Azure) without compromising my home network while learning thanks to the Pfsense.</p>     
+            <div class="embedded expandable">
+              <figure>
+                <a href="#6" onclick="expand('./src/projects/sandbox-env.png'); return false;">
+                  <img src="./src/projects/sandbox-env.png">
+                </a>
+                <figcaption>Overview of my sandbox environment</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="7"><span>Enhanced WAN technologies for DATA & VOICE - MPLS & SD-WAN</span></h3>
+            <p class="keywords"><span>Keywords :  SD-WAN - MPLS - VOIP - IPPBX - Remote Desktop Service / Protocol (RDS/RDP)</span><span class="scope">Scope : School</span></p>
+            <p class="proj-sum">Planned and deployed the Wide Area Network (WAN) for multiple branches. VOIP was sent over MPLS, Inter-Branches communication were done over IPsec VPN using a SD-WAN setup. SD-WAN was also used for Internet Access at each branch.</p>
+            <p>An important worldwide company who has the habits of buying smaller companies in its domain, just bought another which is bigger than usual. Due to all those rapid acquisitions the IT Infrastructure of the group is a mess: different software/services are used, no enterprise directory everywhere, hard to interconnect sites... The executive decision is to start from scratch. The IT department must provide a Proof of Concept (PoC) for a collaborative-oriented infrastructure.</p>
+            <p>Multiple things had to be done: evolutive IP Plan, network topologies, which services to deploy... The choice was made to have a hybrid infrastructure (Cloud + On-Prem), with 2 datacenters (DC) in a close geographical location. A single forest hybrid AD was deployed, followed by Teams and O365 Exchange. Then remote VPN and site-to-site VPNs were also setup. To conclude a FreeIPPBX (Asterisk) was added per site for the VOICE. The only things that weren't in the PoC are the RDS (desktop) farms in multiple AWS regions, for thin clients proximity.</p>
+            <p>For inter-site communication it was decided to use a redundant hub and spoke topology (through both DC). VOICE is routed over an MPLS network for its stability and little overhead. Having only the VOICE doesn't require as much bandwidth and thus will be cheaper. DATA is sent over IPsec tunnels using a SD-WAN setup to always get the best performances, based on criteria.</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#7" onclick="expand('./src/projects/enhanced-wan.png'); return false;">
+                  <img src="./src/projects/enhanced-wan.png">
+                </a>
+                <figcaption>Inter-Site Network Logical Topology (GNS3).</figcaption>
+              </figure>
+            </div>
+
+          <h3 id="8"><span>Campus Network Design - Redudancy and Fault tolerance</span></h3>
+            <p class="keywords"><span>Keywords :  Etherchannel LACP & PAGP - HRSP - R-STP - Hierarchical Models</span><span class="scope">Scope : School</span></p>
+            <p class="proj-sum">Planned and deployed the Local Area Network (LAN) for Campus with a few buildings, the network is segmented. The architecture was thought to have a redundant/fault-tolerant network and to prevent bottlenecks.</p>
+            <p>This probably was my first major network project. The context was to create from the bottom up the LAN for a Campus, using the Three-Tier model. It had to be done with Cisco Devices (In Packet Tracer). A few VLANs were required: depending on the building size either Router-on-a-Stick (ROAS) or L3 Switch Routing (SVI) would be used.  A few ACL scenarios to implement on the switches, routers and firewall (ASA) were given.</p>
+            <p>Other requirements were to have a redundant, free of loops network with link-aggregations: multiple links were used in a full mesh pattern between the CORE and DISTRIBUTION layers, the L3 switches were setup with HSRP on each VLANs (Gateway Redundancy). Rapid-Spanning-Tree was activated on the access ports to shorten end-users connection time. Finally, Etherchannel was used between CORE routers and L3 Switches to aggregate bandwidth and provide fault-tolerance to a few of those links.</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#8" onclick="expand('./src/projects/campus-lan.png'); return false;">
+                  <img src="./src/projects/campus-lan.png">
+                </a>
+                <figcaption>Campus Network Topolgy (Three-Tier Model) </figcaption>
+              </figure>
+            </div>
+
+          <h3 id="9"><span>Minecraft Server - Improved the Server Network with a Proxy</span></h3>
+            <p class="keywords"><span>Keywords :  Log Interpretation - Proxy - Plugin - Sessions</span><span class="scope">Scope : Perso</span></p>
+            <p class="proj-sum">Deployed and managed a game server network, using a server in my basement. With my growing knowledge and the newer technologies, I upgraded it over the years to make it more reliable and improve the user experience.</p>
+            <p>8 Years ago I built my first Minecraft server with plugins to enjoy it with some friends. With time I gain more knowledge on how to fix my issues reading the logs... Since the plugins are community made they aren't always upgraded for newer Minecraft versions: thus should I upgrade the server? Will it break the databases? Some plugins also collide with each others... All this would require multiple servers, which is not great for the players experience as they manually have to connect/disconnect.</p>
+            <p>At some point I learned that you can automatically connect/disconnect from servers (transparent for players) using a Proxy called Bungeecord. Thus, I deployed my own proxied server network. Which gave me better resource management: I could only shut down the server I needed to work on and not the whole server network. I can also use mismatching versions (using version connectors) and thus use all the plugins I want. Unfortunately, I ended up lacking time to continue this awesome project...</p>
+            <div class="embedded expandable">
+              <figure>
+                <a href="#9" onclick="expand('./src/projects/mc-proxy.png'); return false;">
+                  <img src="./src/projects/mc-proxy.png">
+                </a>
+                <figcaption>Overview of my proxied server network.</figcaption>
+              </figure>
+            </div>
+        
+
+      </div>
+    </div>
+
+    <!-- Expanded Image - This is overlay is displayed when an embedded image is clicked -->
+    <div id="expanded-img-overlay" class="expanded-img-overlay">
+      <span class="expanded-img-close" id="expanded-img-close">&times;</span>
+      <img class="expanded-img-content" id="expanded-img-content">
+    </div>
+
+    <!-- To Top Button - This is button will appear to offer to auto-scroll back up -->
+    <button onclick="toTopScroll()" class="toTop" id="toTop" title="Go to top"><span>&#5123;</span></button>
+
+
+    <!---->
+    <!-- Footer : Legal mentions, hosting services -->
+    <!---->
+
+    <footer>
+      <p>2021 - Self-Made, Adrien FIAND | Icons made by Freepik & Iconixar from www.flaticon.com</p>
+    </footer>
+
+  </body>
+
+
+  <!------------------------------------------>
+  <!------------- SCRIPT SECTION ------------->
+  <!------------------------------------------>
+
+  <!-- Library Import : jQuery -->
+  <script src="jquery-3.5.1.min.js"></script>
+
+  <!-- jQuery Function : Hamburger-Menu -->
+  <script>
+    //Store hamburger menu state
+    var IsMenuOpen = false;
+
+    //Method that opens the menu
+    function openMenu(){
+      $('#menu')[0].style.display = "inline-block";
+      IsMenuOpen = true;
+      document.querySelector('#burger-button > button').innerHTML = "&#10005";
+    };
+
+    //Method that closes the menu
+    function closeMenu(){
+      $('#menu')[0].style.display = "none";
+      IsMenuOpen = false;
+      document.querySelector('#burger-button > button').innerHTML = "&#9776;";
+    };
+
+    //Add a listener on the hamburger menu button, on click event do :
+    document.querySelector('#burger-button').addEventListener('click', function (e) {
+      e.preventDefault();
+      //on click if menu already open then close it.
+      if (IsMenuOpen) { 
+        closeMenu();
+        //Remove the listener on the page content ("body"), on click event
+        document.querySelector('#body').removeEventListener('click', closeMenu);
+      }
+      //otherwise (menu not open) then open it.
+      else { 
+        openMenu();
+        //Add a listener on the page content ("body"), on click event it will call close menu
+        document.querySelector('#body').addEventListener('click', closeMenu);
+      }
+    });
+  </script>
+
+  <!-- jQuery Function : Expanding Embedded Images -->
+  <script>   
+    //Method that open the expanded image overlay
+    function expand(img){
+      //storing the expanded overlay area, image container & close button
+      var expanded_area = document.getElementById("expanded-img-overlay");
+      var expanded_image = document.getElementById("expanded-img-content");
+      var expanded_close = document.getElementsByClassName("expanded-img-close")[0];
+
+      //displaying the overlay area and filling it with the image
+      expanded_area.style.display = "block";
+      expanded_image.src = img;
+      
+      //adding an event checker to close the overlay
+      expanded_close.onclick = function() { 
+        expanded_area.style.display = "none";
+      }
+    }
+  </script>
+
+  <!-- jQuery Function : Scrooll To Top -->
+  <script>
+    // Event On Scroll, call display toTop button
+    window.onscroll = function() {toTopDisplay()};
+    
+    var topbutton = document.getElementById("toTop");
+
+    //If scrolled enough then display the toTop button
+    function toTopDisplay() {
+
+      if (document.documentElement.scrollTop > 500) {
+        topbutton.style.display = "block";
+      } else {
+        topbutton.style.display = "none";
+      }
+    }
+    
+    // Function to scroll back to the Top
+    function toTopScroll() {
+      document.documentElement.scrollTop = 0;
+      topbutton.style.display = "none";
+    }
+  </script>
+
+
+</html>

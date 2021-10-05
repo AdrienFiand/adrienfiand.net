@@ -1,0 +1,1333 @@
+/* Smoothen the scrolls on the site */
+html {
+    scroll-behavior: smooth;
+  }
+
+  
+
+/****************************************************/
+/*** CSS RESPONSIVE - BASE  : MOBILE PHONE FIRST) ***/
+/****************************************************/
+
+/*************** General Page Handling **************/
+
+/* Set the site default fonts and background */
+body {
+    margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    background-color: #F0F0F0;
+
+}
+
+/* This is a "body in body". It allows to have a background image and on top the site content */
+/*       All pages have this class on their first DIV that goes from <body> to </body>        */
+#body {
+    margin: 0;
+    color: #222222;
+    background-color: #D8D8D8;
+    background-image: url("./src/bg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 125% auto;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* This is the main site content that goes over #body */
+.main-struct {
+    font-size: 85%;
+    padding: 25px;
+    text-align: justify;
+    background-color: rgba(240,240,240, 0.85);
+    color: #414142;
+    min-height: calc(100vh - 104px);
+}
+
+/* Darken the paragraph background to make it easier to read */
+.main-struct p {
+    background-color: rgba(236,236,236, 0.25);
+}
+
+/* by default disable br for the site */
+.main-struct br {
+    display: none; 
+}
+
+/* create embeeded placeholder for image */
+.embedded {
+    width: 100%;
+    text-align: center;
+}
+
+/* embedded placeholder content */
+.embedded img {
+    filter: contrast(85%);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Default hypelink color */
+a {
+ text-decoration: none;
+ color: #9b530f;
+}
+
+/* main link take full width */
+.main-link {
+    text-align: center;
+    width: 100%;
+}
+
+/* define a box for main links */
+.main-link a{
+    display: inline-block;
+    text-decoration: none;
+    color: #414142;
+    border: 2px dashed #CA7700;
+    padding: 2.5px;
+    font-weight: 500;
+    margin-top: 5px; 
+}
+
+/* main link box shift color on hover */
+.main-link a:hover{
+    color: #CA7700;
+    border: 2px dashed #404040;
+}
+
+/* Main title (Name) */
+/* h1 -> SEE in ** NAVBAR ** */
+
+/* Second title (Sections) */
+h2 {
+    display: block;
+    text-align: center;
+    background-color: #CA7700;
+    border: 15px 0;
+    line-height: 1px;
+    margin-top: 40px; 
+}
+
+/* Display the text on top of the H2 box */
+h2 span{
+    padding: 0px 15px;
+    margin-top: 25px;
+    letter-spacing: 2.5px;
+    background: #ECECEC;
+}
+
+/* don't show the word certifications on narrow screen */
+h2 span > span{
+    display: none;
+}
+
+/* Second title (Sub-Sections) */
+h3 {
+    margin-top: 50px;
+    letter-spacing: 1px;
+    border-bottom: dotted 1.5px #CA7700;
+}
+
+/* footer (copyright area) styling */
+footer > p {
+    bottom: 0px;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+    padding: 15px;
+    border-top: #6c757d 2px solid;
+    background-color: #d8d8d8;
+    color: #222222;
+    z-index: 10;
+    font-family: 'Noto Sans JS', sans-serif;
+}
+
+
+
+/***** Header Handling (Not used on all page) *******/
+
+/* Set a landing pad  that takes the whole screen */
+header {
+    font-family: 'Noto Sans JS', sans-serif;
+    text-shadow: 0px 0px 50px  rgba(255, 150, 0, 0);
+    height: 100vh;
+    background-color: #414142;
+    text-align: center;
+    color: #222222;
+    border-bottom:  #CA7700 1px solid;
+}
+
+/* Add a background image with filters */
+header .background  {
+    height: inherit;
+    background-image: linear-gradient(rgba(65,65,65,0.9),rgba(65,65,65,0.65)), url("./src/header_bg.png");
+    background-color: #414142;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.925;
+    filter: blur(2.5px);
+    -webkit-filter: blur(2.5px);
+}
+
+/* Place the welcome message area in the middle of the screen */
+header #home {
+    /*border: solid 1px rgba(240, 240, 240, 0.90);*/
+    color: #ececec;
+    width: 90%;
+    max-width: 900px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.avatar > img {
+    border: solid 3.5px #ECECEC;
+    border-radius: 9999px;
+    height:60px;
+}
+
+
+/* Welcome message upper part */
+.h  {
+    text-shadow: 0px 0px 150px  rgb(0, 0, 0);
+    font-weight: 700;
+    padding-left: 15px;
+    padding: 5px 0px;
+    letter-spacing: 2.5px;
+    color: #ECECEC;
+    font-size: 150%;
+}
+
+/* Welcome message middle part */
+header #catch_phrase{
+    font-size: 95%;
+    display: block;
+    padding: 10px 0px;
+}
+
+header #job{
+    font-size: 65%;
+    display: block;
+    font-style: italic;    
+}
+
+/* Welcome message remaining part */
+header p {
+    padding: 0px 25px;
+    font-weight:lighter;
+}
+
+/* A text slider is part of the upper welcome message part */
+#text-slider {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    display: inline;
+}
+  
+/* Change the style of the sliding world inside the sentence */
+#text-slider > li {
+    text-align: center;
+    width: 6em;
+    list-style-type:none;
+    position: relative;
+    display: none;
+    border-bottom: 1px dashed rgb(120, 120, 120);
+}
+
+/* Add a scroll / down arrow button */
+.scroll-button{ 
+    position: absolute;
+    text-decoration: none;
+    color:#ECECEC;
+    text-shadow: none;
+    font-size: 200%;
+    font-weight: 300;
+    bottom: 50px;
+}
+
+/* lang selection box */
+.langSelectorOnHeader {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 5px;
+    border:  rgba(255, 255, 255, 0.5) 2px solid;
+    background-color: #181313;
+    color: #F0F0F0;
+    font-weight: 900;
+    font-family: 'Noto Sans JS', sans-serif;
+}
+
+
+
+/******* Navbar Handling (Contains the menu) *********/
+
+/* Nav is set to stick to the top and over the content (shadow effect) */
+nav {
+    z-index: 1;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 50px;
+    margin: 0;
+    border-bottom: 50px;
+    border-radius: 500px/12.5px;
+    box-shadow: 0 10px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+/* Fill the navbar and add a border to the bottom to intensify separation */
+nav > div {
+    border-bottom:  #CA7700 1px solid;
+    height: inherit;
+    background-color: #404040;
+}
+
+/* h1 is used to display the FirstName in a cursive font */
+h1 {
+    margin: 0px;
+    font-family: 'Rock Salt', cursive;
+    color: rgb(255, 150, 0);
+    display: block;
+    float: left;
+    padding-left: 15px;
+    position: relative;
+    top: 48%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    font-size: 110%;
+}
+
+/* h1 span is used to display the LastName first letter */
+h1 span{
+    color:#ECECEC;
+}
+
+/* A linkeding icon is incorporated in the nav bar */
+nav img {
+    position: relative;
+    top: 25%;
+    padding-left: 10px;
+    display: block;
+    float: left;
+    height: 20px;
+}
+
+/* For PC the menu is inside the navbar, but hidden on mobile */
+nav #menu {
+    display: none;
+    height: 100%;
+}
+
+/* Define the menu pages list */
+nav ul {
+    font-family: 'Noto Sans JS', sans-serif;
+    font-weight: 500;
+    background-color: #404040;
+    margin: 0;
+    position: absolute;
+    top: 51px;
+    right: 0px;
+    float: right;
+    width: 55%;
+    height: calc(100vh - 51px);
+    border-left: #A0A0A0 2px solid;
+
+}
+
+/* Define the menu list items */
+nav li {
+    letter-spacing: normal;
+    width: inherit;
+    color: #ECECEC;
+    display: inline-block;
+    padding: 10px 0;
+    border-top:  rgba(255, 255, 255, 0.5) 3px solid;
+}
+
+/* Remove the separation border on first list item */
+nav li:first-child {
+    border-top:  0px;
+}
+
+/* Change the page hyper link color */
+nav li a {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: #ECECEC;
+    text-decoration: none;
+}
+
+/* Change the page hyper link color on hover */
+nav li a:hover {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: rgba(170, 170, 170, 0.9);
+    text-decoration: none;
+}
+
+/* Change the current page hyper link color */
+nav li .selected {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: rgb(255, 150, 0);
+}
+
+/* Define an area for the menu burger button */
+nav #burger-button {
+    position: relative;
+    top: 45%;
+    -webkit-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    padding-right: 15px;
+    float: right;
+    display: inline;
+}
+
+/* change the hamburger button style */
+nav #burger-button button {
+    font-size: 175%;
+    color: #ECECEC;
+    border: none;
+    background-color: transparent;
+}
+
+/* lang selection box */
+.langSelectorOnMenu{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    border: rgba(255, 255, 255, 0.5) 3px solid;
+    background-color: #414142;
+    color: #ECECEC;
+}
+
+
+
+/*************** Contact Page Specific ***************/
+
+/* Contact Table */
+.contact {
+    text-align: center;
+    width: 100%;
+    border-spacing:0 30px;
+}
+
+/* Contact illustration (first column) */
+.contact .logo {
+    text-align: right;
+    padding-right: 20px;
+    border-right: 2px solid #CA7700;
+    width: 40px;
+}
+
+/* Contact content (second column) */
+.contact .content{
+    width: auto;
+}
+
+/* The contact content as a second embedeed table */
+.contact .content table {
+    width: 100%;
+    border-spacing: 0px;
+}
+
+/* Sizing of the embedded columns */
+.contact .content td:first-child {
+    width: 30%
+}
+
+/* Sizing of the embedded columns */
+.contact .content td:last-child {
+    width: 70%
+}
+
+/* Adding row separation on the embedded table  */
+.contact .content tr td {
+    border-bottom: 1px dotted #404040;
+    padding: 5px;
+    width: 70%
+}
+
+/* Disabling last row separation on the embedded table  */
+.contact .content tr:last-child td {
+    border-bottom: 0px;
+    padding: 5px;
+}
+
+
+
+/*************** Resume Page Specific ***************/
+
+/* container for big picture */
+.main-embedded {
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    width: 100%;
+}
+
+/* big image */
+.main-embedded img{
+    width: 100%;
+    height: 100%;
+    filter: contrast(85%);
+}
+
+
+
+/*************** Project Page Specific ***************/
+
+/* summary at the beginning */
+.summary {
+    padding: 15px 0px;
+}
+
+.proj-sum {
+    display: inline-block; 
+    margin: 0;
+    font-weight: 600;
+}
+
+/* precisions under the sub-section title (float right) */
+.scope {
+    float: right;
+    width: 100px;
+    text-align: right;
+
+}
+
+/* precisions under the sub-section title (float left) */
+.keywords {
+    display: block;
+    float: left;
+    font-style: oblique;
+    font-size: 80%;
+    width: 100%;
+    margin-top: 0px;
+}
+
+/* illustrations are to inline-block */
+figure {
+    display: inline-block;
+}
+
+/* illustrations caption styling */
+figcaption {
+    font-style: oblique;
+    font-size: 80%;
+    
+}
+
+/* illustration can be expanded */
+.expandable img:hover {filter: grayscale(75%) contrast(85%);}
+
+/* illustration expanded overlay (fullscreen) */
+.expanded-img-overlay {
+  display: none;
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.75);
+}
+
+/* illustration expanded content (img) */
+.expanded-img-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 80%;
+  height: auto;
+  max-height: 90vh;
+  max-width: 1000px;
+}
+
+/* illustration expanded close (button) */
+.expanded-img-close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: orange;
+  font-size: 50px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* illustration expanded close (button on hover) */
+.expanded-img-close:hover {
+    color: #bbb;
+    cursor: pointer;
+  }
+
+/* scroll to top button */
+.toTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #CA7700;
+    color: rgba(240,240,240);
+    cursor: pointer;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  /* scroll to top button on hover */
+  .toTop:hover {
+    background-color: #404040;
+    color: #CA7700;
+  }
+
+/*************** About Me Page Specific ***************/
+
+/* synthesis at the beginning */
+.synthesis {
+    text-align: justify;
+    padding: 15px 0px;
+}
+
+/* skill table */
+.skill {
+    text-align: center;
+    width: 100%;
+    border-spacing:0 30px;
+}
+
+/* activate br in the table */
+.skill br {
+    display: block !important;
+}
+
+/* skill as a second embedded table */
+.skill table {
+    width: 100%;
+}
+
+/* skill first column */
+.skill .title {
+    font-size: 90%;
+    font-weight: bolder;
+    border-right: 2px solid #CA7700;
+    width: 30px;
+}
+
+.skill .title br {
+    display: block;
+    padding: 0;
+    margin:0;
+}
+
+/* skill second column row separation */
+.skill .content tr td {
+    border-bottom: 1px dotted #404040;
+    padding: 5px;
+
+}
+
+/* skill second column row separation (disable last row) */
+.skill .content tr:last-child td {
+    border-bottom: 0px;
+    padding: 5px;
+}
+
+
+
+/************* Certification Page Specific **************/
+
+/* override margins for certification title (sub-sections) */
+.cert {
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+
+/* precisions under the sub-section title (float right) */
+.date {
+    display: block;
+    float: right;
+    width: 100px;
+    text-align: right;
+    font-weight: lighter;
+    letter-spacing: 0px;
+    font-size: 80%;
+    margin-top: 0px;
+
+    font-style: oblique;
+}
+
+
+.resume-img {
+    display: block;
+}
+
+.resume-html {
+    display: none;
+
+}
+
+
+
+
+/****************************************************/
+/***** CSS RESPONSIVE - OVERRIDE : WIDE PHONES) *****/
+/****************************************************/
+
+@media only screen and (min-width: 550px) {
+
+    
+    .contact {
+        width: 90%;
+    }
+
+    h2 span > span{
+        display: inline;
+        padding: 0;
+    }
+
+    header #home {
+        width: 70%;
+        max-width: 900px;
+    }
+
+    .avatar {
+        float: right;
+    }
+
+    .avatar > img {
+        height:90px;
+    }
+
+    .name {
+        float: left;
+    }
+
+    header #job{
+        padding-top: 5px;
+        font-size: 55%;
+        float: left;
+        text-align: left;
+        font-style: italic;    
+    }
+
+    header #catch_phrase{
+        font-size: 75%;
+        padding: 50px 0px;
+    }
+
+    .presentation{
+        height: 100px;
+    }
+
+    /* Add border to the welcome message area */
+    header #home > div {
+        padding: 0px 30px;
+        border-width: 3px;
+        border-left: solid 5px rgb(255, 150, 0);
+    }
+
+    .h  {
+        line-height: 30px;
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    header #job{
+        font-size: 55%;
+        float: left;
+        text-align: left;
+        font-style: italic;    
+    }
+
+}
+
+
+
+
+
+/****************************************************/
+/****** CSS RESPONSIVE - OVERRIDE : TABLETS ) *******/
+/****************************************************/
+
+@media only screen and (min-width: 850px) {
+    
+    body {
+      font-size: 175%;
+    }
+
+    .avatar > img {
+        height:110px;
+    }
+
+    .presentation{
+        height: 125px;
+    }
+
+    header #job{
+        font-size: 52%;
+    }
+
+
+    .h  {
+        line-height: 40px;
+    }
+
+    .synthesis {
+        text-align: center;
+        width: 550px; 
+        margin:auto;
+    }
+
+    .letter-space_0_05 {
+        letter-spacing:0.05px
+    }
+
+    .letter-space_1_50 {
+        letter-spacing:1.5px
+    }
+
+    .letter-space_-0_50 {
+        letter-spacing:-0.5px
+    }
+
+    .letter-space_-0_10 {
+        letter-spacing:-0.1px
+    }
+
+    .letter-space_-0_25 {
+        letter-spacing:-0.25px
+    }
+
+    .main-struct br {
+        display: block;
+        margin-bottom: 5px; 
+    }
+
+  /*  #text-slider > li {
+        width: 200px;    
+      }*/
+
+    .langSelectorOnHeader {
+        top: 10px;
+        right: 10px;
+    }
+
+    .langSelectorOnMenu{
+        font-size: 50%;
+        height: 24px;
+        right: 10px;
+        top: 16px;
+        display: inline-block;
+        text-decoration: none;
+
+    }
+
+    nav {
+        height: 62.5px;
+        font-size: 85%;
+        border-bottom: 0px;
+        border-radius: 500px/12.5px;
+        z-index: 1;
+    }
+
+    nav img {
+        position: relative;
+        top: 24%;
+        padding-left: 15px;
+        display: block;
+        float: left;
+        height: 30px;
+    }
+
+    nav #menu {
+        display: inline;
+    }
+
+    nav ul {
+        border:0px;
+        background-color: transparent;
+        padding-left: 0;
+        margin: 0;
+        width: inherit;
+        height: 20px;
+        line-height: 20px;
+        font-size: 65%;
+        letter-spacing: -1em;
+        top: 45%;
+        right: 60px;
+        -webkit-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        display: flex;
+    }
+    
+    nav li {
+        letter-spacing: normal;
+        width: inherit;
+        display: flex;
+        padding: 0px 5px;
+        border-top: 0px;
+        border-right:  rgba(255, 255, 255, 0.5) 3px solid;
+
+    }
+
+    nav li:last-child {
+        border-right:  0px;
+    }
+
+    nav li a {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    nav li a:hover {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        text-decoration: none;
+    }
+
+    nav li .selected {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    nav #burger-button {
+        display: none;
+    }
+
+    .main-struct {
+        display: block;
+        width: 80%;
+        height: 100%;
+        margin: 0 auto;
+        border-width: 1.5px;
+        border-style: solid;
+        border-image: 
+        linear-gradient(
+          to bottom, 
+          rgba(0, 0, 0, 0.05), 
+          rgba(0, 0, 0, 0.25)
+        ) 1 100%;
+        font-size: 55%;
+    }
+
+    .main-embedded {
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .main-embedded img{
+        padding:10px 0px;
+        width: 100%;
+        height: 100%;
+        filter: contrast(90%);
+    }
+
+    .embedded img {
+        max-width: 500px;
+    }
+    
+    .skill {
+        padding: 0 25px;
+    }
+
+    .resume-img {
+        display: none;
+    }
+
+    .resume-html {
+        display: block;
+        line-height: 150%;
+        margin-top: 30px;
+    }
+
+    .resume{
+        padding:4%;
+        table-layout: fixed;
+        font-size: 1.1vw;
+        border-collapse: collapse;
+        background-color: rgb(243,243,243);
+        text-align:justify;
+        color: #2E2E2E;
+    }
+
+    .resume p {
+        background-color: transparent;
+        margin: 0px;
+        padding-left:  7.5px;
+        padding-right:  7.5px;
+        }
+
+    .resume-stretch {
+        width:100%;
+        display: inline-block;
+        height: 0px;
+        font-weight: 0px;
+        line-height: 0px;
+    }
+
+   
+    
+    .resume td {
+        vertical-align: top;
+    }
+    
+    .resume br{
+        display: block;
+        margin-top: -0.175em;
+    }
+    
+
+   
+    .resume-icon {
+        width: 3%;
+        padding: 0px; 
+        text-align: center; 
+        vertical-align: middle !important;
+       
+    }
+    
+    .resume-Vbar {
+        width: 1.5%;    
+    }
+    
+    .resume-left {
+        width: 32.5%;
+        line-height: 1.25em;    
+    }
+    
+    
+    .resume-contact {
+        padding: 2.5px;
+        height:5px;
+        vertical-align: middle !important;
+    }
+    
+    .resume-contact p {
+        margin: 0px;
+    }
+
+    .resume-right{
+        padding-left: 5px;
+        position: relative;
+    }
+    
+    .resume-title{
+        font-size: 2.5em;
+        padding-top: 10px;
+        
+    }
+    
+    .resume-subtitle{
+        font-size: 1.45em;
+        padding-top: 15px;
+    }
+
+
+
+    .resume-section {
+        border-bottom: solid 2px #414141;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        padding-top: 1em !important;
+        font-size: 1.4em !important;
+        line-height: 1.3em !important;
+        height: 1.4em !important;   
+    }
+
+    .resume-section b{
+        padding-left: 7.5px;
+    }
+
+
+    .resume ul {
+        padding: 0px;
+        padding-left: 1.15em;
+        padding-right: 0.6em;
+        margin: 0px;
+        list-style-position: outside;
+        line-height: 1.5em;
+    }
+
+    .resume ul li::marker {
+        content: '\2022  ';
+        font-weight: bolder;
+
+    }
+
+    .resume ul li {
+        line-height: 130%;
+    }
+
+    .resume-listing {
+        line-height: 115%;
+    }
+
+
+    .resume-double {
+        line-height: 120%;
+    }
+
+    .resume-date {
+        position: relative;
+        float:right;
+        text-decoration: underline dotted;
+
+    }
+
+    .resume-mainitem {
+        font-size: 1.14em;
+        height: 1.14em;
+    }
+
+    .resume-description {
+        vertical-align:bottom !important;
+    }
+
+    .resume-space-top5 {
+        padding-top: 1.35em;
+    }
+
+    .resume-space-top3 {
+        padding-top: 1.5em;
+    }
+
+    .resume-space-top2 {
+        padding-top: 0.15em;
+    }
+
+    .resume-space-top0-5 {
+        padding-top: 0.3em;
+    }
+
+    .resume-space-top1 {
+        padding-top: 0.25em;
+    }
+
+    .resume-space-top1-5 {
+        padding-top: 0.5em;
+    }
+
+    .resume-space-top1-9 {
+        padding-top: 0.75em;
+    }
+
+    .resume-space-bottom5 {
+        padding-bottom: 5em;
+    }
+
+    .resume-space-bottom3 {
+        padding-bottom: 0.65em;
+    }
+
+    .resume-space-bottom2 {
+        padding-bottom: 0.15em;
+    }
+    
+    .resume-space-bottom1 {
+        padding-bottom: 0.25em;
+    }
+
+    .resume-certimg {
+        padding-top:0.5em;
+        text-align: center;
+        filter: grayscale();
+        vertical-align: middle;
+    }
+
+    .resume-certimg img {
+        margin-left: 2em;
+        margin-right: 2em;
+        height: 5.5em;
+    }
+    
+      
+}
+
+
+
+/****************************************************/
+/***** CSS RESPONSIVE - OVERRIDE : COMPUTERS ) ******/
+/****************************************************/
+
+@media only screen and (min-width: 1100px) {
+    .resume{
+        font-size: 0.87vw;
+    }
+
+    body {
+        font-size: 250%;
+      }
+
+    .avatar > img {
+        height:200px;
+    }
+
+    header #job{
+        font-size: 51%;
+    }
+
+
+    .presentation{
+        height: 220px;
+    }
+
+    .h  {
+        padding-top: 30px;
+        line-height: 60px;
+    }
+
+   /* #text-slider > li {
+        width: 300px;    
+      }*/
+
+    .langSelectorOnHeader {
+        top: 15px;
+        right: 15px;
+    }
+
+    .langSelectorOnMenu{
+        font-size: 50%;
+        height: 30px;
+        right: 12.5px;
+        top: 20px;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    nav {
+        height: 75px;
+        font-size: 65%;
+    }
+
+    nav img {
+        top: 27%;
+    }
+
+    nav ul {
+        right: 55px;
+        height: 30px;
+        font-size: 75%;
+        letter-spacing: -1em;
+        padding-right: 15px;
+        top: 47%;
+        line-height: 30px;
+    }
+    
+    nav li {
+        padding: 0px 10px;
+    }
+
+    .main-struct {
+        font-size: 40%;
+        width: 62.5%;
+        line-height: 150%;
+    }
+
+
+    .embedded img {
+        max-width: 400px;
+    }
+
+    .skill {
+        padding: 0 50px;
+    }
+
+    .toTop {
+        font-size: 30px;
+        width: 45px;
+        height: 45px;
+      }
+
+
+    .contact .logo {
+        width: 65px;
+    }
+
+}
+
+
+/****************************************************/
+/**** CSS RESPONSIVE - OVERRIDE : WIDE SCREEN ) *****/
+/****************************************************/
+
+@media only screen and (min-width: 1700px) {
+    .resume{
+        font-size: 0.77vw;
+    }
+
+    .main-struct {
+        padding: 25px 65px;
+        font-size: 40%;
+        width: 55%;
+        line-height: 150%;
+    }
+
+    .skill {
+        padding: 0 75px;
+    }
+
+    .contact .logo {
+        width: 90px;
+    }
+
+}
+
+
+
+/****************************************************/
+/** CSS RESPONSIVE - OVERRIDE : ULTRAWIDE SCREEN ) **/
+/****************************************************/
+
+@media only screen and (min-width: 2100px) {
+    .resume{
+        font-size: 0.925em;
+    }
+
+    .main-struct {
+        padding: 25px 100px;
+        width: 50%;
+        max-width: 1100px;
+        line-height: 150%;
+    }
+
+    .embedded img {
+        max-width: 500px;
+    }
+
+    .skill {
+        padding: 0 100px;
+    }
+
+}
+
+/****************************************************/
+/*** CSS RESPONSIVE - SPECIFIC : IE 10+ SUPPORT ) ***/
+/****************************************************/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {    
+    header { display:none; }
+    nav ul { top:35px; }
+    .main-struct, h2 span {  background-color: white; }
+    .resume, .main-struct p  {background-color: transparent;}
+}
+

@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+
+  <!------------------------------------------>
+  <!------------- HEAD SECTION --------------->
+  <!------------------------------------------>
+
+  <head>
+    <!-- Metadata - Title, Encoding, CSS Sheet, Viewport settings -->
+    <title>Adrien Fiand | Certifications</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href=".././styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- Font Import - Noto Sans & Noto Sans JP for content | Rock Salt for Singature/Logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-FR">
+    <link rel="alternate" href="https://www.adrienfiand.net/fr" hreflang="fr-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-CA">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-US">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="en-GB">
+    <link rel="alternate" href="https://www.adrienfiand.net/" hreflang="x-default">
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex">
+  </head>
+
+
+  <!------------------------------------------>
+  <!------------- BODY SECTION --------------->
+  <!------------------------------------------>
+
+  <body>
+
+    <!---->
+    <!-- Navbar : Contains Logo, flat menu & hamburger menu, language selector -->
+    <!---->
+
+    <nav>
+      <div>
+
+        <!-- Menu Icons (depend on responsive CSS) - hamburger menu button -->
+        <div id="burger-button"><button>&#9776;</button></div>
+
+        <!-- Logo - signature style personnal name -->
+        <a href=".\index.html"><h1 id="logo">Adrien<span>F.</span></h1></a>
+
+        <!-- Redirect Icon - linkedin personnal page redirect -->
+        <a href="https://fr.linkedin.com/in/adrien-fiand/fr"><img src=".././src/icon-linkedin.svg"> </a>
+        
+        <!-- Menu Items (depend on responsive CSS) - relative paths used -->
+        <div id="menu">
+          <ul>
+            <li><a class href=".\index.html#logo">À-propos</a></li>
+            <li><a class href=".\projects.html">Projets</a></li>
+            <li><a class="selected" href=".\certifications.html">Certifications</a></li>
+            <li><a class href=".\resume.html">Curriculum Vitae</a></li>
+            <li><a class href=".\contact.html">Contact</a></li>
+          </ul>
+
+          <!-- Language Dropbox - inline JS, switch to other language path -->
+          <select class="langSelectorOnMenu" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" name="LanguageSelector">
+            <option value="../index.html">EN</option>
+            <option selected value="./fr/index.html">FR</option>
+          </select>
+        </div>
+
+      </div>
+    </nav>
+
+    <!---->
+    <!-- Main Div : Contains page content, embedded content (img) -->
+    <!---->
+    
+    <div id="body">
+      <div class="main-struct">
+        <h2><span><span>Certifications </span>Techniques</span></h2>
+          
+          <div class="embedded" style="margin-top: 50px;">  
+                <img src=".././src/certifs/certs.png">
+          </div>
+          <div class="main-link">
+            <a style="margin-bottom:0px" href="https://www.credly.com/users/adrien-fiand/badges">Acclaim / Credly - Voir les certifications</a>
+          </div>
+
+          <h3 class="cert" style="margin-top:35px"><span>[CCNA] Cisco Certified Network Associate - Routing and Switching</span><span class="date">Expire : 2023</span></h3>
+          <p>Compétences associées : Configuration d'Etherchannels, Spanning-Tree, SVI/Router on a Stick, Routage dynamique et statique. Compréhension des menaces courantes et des techniques d'atténuation (DOT1X...) - Concepts de QOS, MPLS et VPN - Apprentissage d'approches de dépannage</p>
+
+          <h3 class="cert"><span>[CCENT] Cisco Certified Entry Network Technician</span><span class="date">Expire : 2022</span></h3>
+          <p>Compétences associées : Compréhension des modèles OSI et TCP/IP, TCP et UDP, Topologies Réseaux, Adressage IPv4/6 - Configurations de la commutation (VLAN/802.1Q) et du routage (Inter-Vlan) - Concepts DNS, DHCP, NTP, PAT</p>
+
+          <h3 class="cert"><span>[SYSOPS] AWS Certifié SysOps Administrator – Associate</span><span class="date">Expire : 2024</span></h3>
+          <p>Compétences associées : Utilisation de la console de management AWS & ligne de commande (CLI) - Surveillance et dépannage de systèmes dans AWS (CloudWatch/Trail) - Concepts réseau et sécurité dans AWS (VPC, Peering, Gateways, Security Groups, ACL, Routing Table) - Conception d'architecture dans AWS (Haute-disponibilité, élasticité...)</p>
+
+          <h3 class="cert"><span>[CCP] AWS Certified Cloud Practitioner</span><span class="date">Expire : 2024</span></h3>
+          <p>Compétences associées : Compréhension du modèle de responsabilité partagée AWS, des meilleures pratiques de sécurité, des pratiques de coût et de facturation d'AWS. Connaissances basiques des services AWS les plus utilisés (EC2, VPC, RDS, IAM, S3, R53, Lambda)</p>
+        
+          <h3 class="cert"><span>[MTA] Windows Server Administration Fundamentals</span><span class="date">Arrêtée : 2021</span></h3>
+          <p style="margin-bottom:60px">Compétences associées : Active Directory - Installation et maintenance de Windows Server - Rôles (DNS, DHCP, NPS, IIS...) - Réseau et stockage sous Windows - Dépannage et surveillance des performances</p>
+      
+
+
+        <h2><span><span>Certifications de </span>Language</span></h2>
+          <h3 class="cert"><span>[TOEIC] Écoute et lecture - Anglais (Expérimenté)</span><span class="date">Expire : 2023</span></h3>
+          <p>SCORE : 960 (Expérimenté) - Le TOEIC évalue les compétences de lecture et d'écoute dans un contexte professionnel général. Le score maximum possible est de 990.</p>
+        
+      </div>
+    </div>
+
+    <!---->
+    <!-- Footer : Legal mentions, hosting services -->
+    <!---->
+
+    <footer>
+      <p>2021 - Créé et réalisé par Adrien FIAND | Icones faites par Freepik & Iconixar provenant de www.flaticon.com</p>
+    </footer>
+
+  </body>
+
+
+  <!------------------------------------------>
+  <!------------- SCRIPT SECTION ------------->
+  <!------------------------------------------>
+  
+  <!-- Library Import : jQuery -->
+  <script src="../jquery-3.5.1.min.js"></script>
+
+  <!-- jQuery Function : Hamburger-Menu -->
+  <script>
+    //Store hamburger menu state
+    var IsMenuOpen = false;
+
+    //Method that opens the menu
+    function openMenu(){
+      $('#menu')[0].style.display = "inline-block";
+      IsMenuOpen = true;
+      document.querySelector('#burger-button > button').innerHTML = "&#10005";
+    };
+
+    //Method that closes the menu
+    function closeMenu(){
+      $('#menu')[0].style.display = "none";
+      IsMenuOpen = false;
+      document.querySelector('#burger-button > button').innerHTML = "&#9776;";
+    };
+
+    //Add a listener on the hamburger menu button, on click event do :
+    document.querySelector('#burger-button').addEventListener('click', function (e) {
+      e.preventDefault();
+      //on click if menu already open then close it.
+      if (IsMenuOpen) { 
+        closeMenu();
+        //Remove the listener on the page content ("body"), on click event
+        document.querySelector('#body').removeEventListener('click', closeMenu);
+      }
+      //otherwise (menu not open) then open it.
+      else { 
+        openMenu();
+        //Add a listener on the page content ("body"), on click event it will call close menu
+        document.querySelector('#body').addEventListener('click', closeMenu);
+      }
+    });
+  </script>
+
+
+</html>
