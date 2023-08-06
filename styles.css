@@ -1148,6 +1148,11 @@ figcaption {
         padding-bottom: 0.25em;
     }
 
+    .resume-space-bottom0-5 {
+        padding-bottom: 0.07em;
+    }
+
+
     .resume-certimg {
         padding-top:0.5em;
         text-align: center;
