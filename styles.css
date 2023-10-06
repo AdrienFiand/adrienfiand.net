@@ -1108,6 +1108,10 @@ figcaption {
         padding-top: 1.35em;
     }
 
+    .resume-space-top4 {
+        padding-top: 1.2em;
+    }
+	
     .resume-space-top3 {
         padding-top: 1.5em;
     }
@@ -1251,7 +1255,7 @@ figcaption {
 
 
     .embedded img {
-        max-width: 400px;
+        max-width: 500px;
     }
 
     .skill {
@@ -1317,7 +1321,7 @@ figcaption {
     }
 
     .embedded img {
-        max-width: 500px;
+        max-width: 550px;
     }
 
     .skill {
